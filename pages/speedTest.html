@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тарифы для дома</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/speedtest.style.css">
+  <script src="../js/dropdown.js"></script>
+  <script src="../js/burgerMenu.js"></script>
+  <script src="../js/auth.js"></script>
+</head>
+
+<body>
+  <header id="main-block">
+    <div class="container">
+      <nav class="nav">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../src/images/logo.svg" alt="">
+          </a>
+        </div>
+        <div class="burger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="nav-links">
+          <div class="links-wrapper">
+            <div class="dropdown">
+              <a class="nav-link" href="#">Тарифы</a>
+              <div class="links">
+                <div class="column">
+                  <a href="../pages/homeRates.html">Тарифы для дома</a>
+                  <a href="../pages/bussinesRates.html">Тарифы для бизнеса</a>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a class="nav-link" href="#">Разделы</a>
+              <div class="links">
+                <div class="column">
+                  <a href="../pages/news.html">Новости</a>
+                  <a href="../pages/about.html">О нас</a>
+                </div>
+                <div class="column">
+                  <a href="../pages/documents.html">Документация</a>
+                  <a href="../pages/speedTest.html">Замерить скорость</a>
+                </div>
+              </div>
+            </div>
+            <a class="nav-link" href="../pages/map.html">Контакты</a>
+          </div>
+          <a class="nav-link account" href="#" onclick="togglePopup('loginPopup')">Личный кабинет</a>
+          <a class="nav-link pay" href="#">Оплатить</a>
+        </div>
+        <div id="loginPopup" class="popup">
+          <div class="popup-content">
+            <img src="../src/images/logo.svg" alt="">
+            <h3>Авторизация</h3>
+            <form id="loginForm">
+              <input type="email" placeholder="Email" name="email" required>
+              <input type="password" placeholder="Пароль" name="password" required>
+              <p>Нет аккаунта? <span class="register-button"
+                  onclick="togglePopup('registerPopup')">Зарегистрироваться</span></p><br>
+              <button type="submit">Войти</button>
+            </form>
+            <button class="close" onclick="togglePopup('loginPopup')"></button>
+          </div>
+        </div>
+
+
+        <!-- Popup меню для регистрации -->
+        <div id="registerPopup" class="popup">
+          <div class="popup-content">
+            <img src="../src/images/logo.svg" alt="">
+            <h3>Регистрация</h3>
+            <form id="registerForm">
+              <input type="password" placeholder="Имя" name="Name" required>
+              <input type="password" placeholder="Фамилия" name="surname" required>
+              <input type="email" placeholder="Email" name="email" required>
+              <input type="password" placeholder="Пароль" name="password" required>
+              <span class="login-button" onclick="togglePopup('loginPopup')">Обратно к авторизации</span><br>
+              <button type="submit">Зарегистрироваться</button>
+            </form>
+            <button class="close" onclick="togglePopup('registerPopup')"></button>
+          </div>
+        </div>
+        <!-- Popup меню для оплаты -->
+        <div id="paymentPopup" class="popup">
+          <div class="popup-content">
+            <img src="../src/images/logo.svg" alt="">
+            <h3>Оплата</h3>
+            <button class="close" onclick="togglePop('paymentPopup')"></button>
+            <form action="" method="POST">
+              <input type="text" name="cardNumber" placeholder="Номер карты" required>
+              <input type="text" name="cardHolderName" placeholder="Имя владельца карты" required>
+              <input type="text" name="expiryDate" placeholder="Срок действия (MM/YY)" required>
+              <input type="text" name="cvv" placeholder="CVV-код" required>
+              <button type="submit">Оплатить</button>
+            </form>
+          </div>
+        </div>
+
+        <div id="overlayPayment"></div>
+        <div id="overlay"></div>
+      </nav>
+    </div>
+  </header>
+  <div class="frame-container">
+    <p class="section-routing">Главная / Тест скорости</p>
+    <h2 class="news-heading headingSecond">Тест скорости</h2>
+    <iframe src="https://2ip.ru/speed-widget/?id=817" scrolling="no"></iframe>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="footer-blockWrapper">
+          <div class="footer-links">
+            <div class="column-links">
+              <a href="./pages/about.html" class="footer-link">О компании</a>
+              <a href="./pages/news.html" class="footer-link">Новости</a>
+              <a href="./pages/documents.html" class="footer-link">Документы</a>
+            </div>
+            <div class="column-links">
+              <a href="./pages/homeRates.html" class="footer-link">Тарифы для дома</a>
+              <a href="./pages/bussinesRates.html" class="footer-link">Тарифы для бизнеса</a>
+              <a href="./pages/map.html" class="footer-link">Контакты</a>
+            </div>
+            <div class="column-links">
+              <a href="./pages/speedTest.html" class="footer-link">Тест скорости</a>
+            </div>
+          </div>
+          <div class="footer-block">
+            <div class="footer-buttons">
+              <a class="nav-link account" href="#" onclick="togglePopup('loginPopup')">Личный кабинет</a>
+              <a class="nav-link pay" href="#">Оплатить</a>
+            </div>
+            <div class="phone-number">
+              <img src="../src/images/icons/icon-phone.svg" alt="Телефонный значок">
+              <p>+7 (4725) 43-97-20</p>
+              <span>Круглосуточно</span>
+            </div>
+            <div class="block-icons">
+              <a href="" class="icon-link">
+                <img src="../src/images/icons/icon-vk.svg" alt="" class="icon-vk">
+              </a>
+              <a href="" class="icon-link">
+                <img src="../src/images/icons/icon-telegram.svg" alt="" class="icon-telegram">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="block-confidentiality">
+          <p>&copy; ЗАО «Роснэт»,
+            <script>document.write(new Date().getFullYear());</script>
+          </p>
+          <p>Продолжая использовать наш сайт, вы даете согласие на обработку файлов cookies и других
+            пользовательских
+            данных, в соответствии с Политикой конфиденциальности.</p>
+          <img src="../src/images/sitex-logo-white.png" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

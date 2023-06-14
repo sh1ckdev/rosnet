@@ -1,0 +1,32 @@
+
+.page-link {
+  margin-right: 10px;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.page-link:hover {
+  color: #ffffff;
+  background: #6984F0;
+  border-radius: 5px;
+}
+
+.page-link.active {
+  color: #ffffff;
+  background: #6984F0;
+  border-radius: 5px;
+}
+
+.cardNews-container {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.cardNews-container.fade-out {
+  opacity: 0;
+}
