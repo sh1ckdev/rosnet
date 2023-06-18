@@ -1,0 +1,49 @@
+.documents{
+  background-color: #fff;
+  padding: 20px;
+}
+
+#fileList{
+  padding: 20px 0 60px 0;
+}
+
+
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.file-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.file-details {
+  flex: 1;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #263057;
+}
+
+.doc-wrapper{
+  margin-left: 50px;
+}
+
+.doc-wrapper h4{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #263057;
+}
+
+.file-details p:first-child {
+  font-weight: bold;
+}

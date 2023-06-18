@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/about.style.css">
+  <script src="../js/scrollToTop.js"></script>
+  <script src="../js/dropdown.js"></script>
+  <script src="../js/burgerMenu.js"></script>
+  <script src="../js/auth.js"></script>
+</head>
+
+<body>
+  <header id="main-block">
+    <div class="container">
+      <nav class="nav">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../src/images/logo.svg" alt="">
+          </a>
+        </div>
+        <div class="burger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="nav-links">
+          <div class="links-wrapper">
+            <div class="dropdown">
+              <a class="nav-link" href="#">Тарифы</a>
+              <div class="links">
+                <div class="column">
+                  <a href="../pages/homeRates.html">Тарифы для дома</a>
+                  <a href="../pages/bussinesRates.html">Тарифы для бизнеса</a>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a class="nav-link" href="#">Разделы</a>
+              <div class="links">
+                <div class="column">
+                  <a href="../pages/news.html">Новости</a>
+                  <a href="../pages/about.html">О нас</a>
+                </div>
+                <div class="column">
+                  <a href="../pages/documents.html">Документация</a>
+                  <a href="../pages/speedTest.html">Замерить скорость</a>
+                </div>
+              </div>
+            </div>
+            <a class="nav-link" href="../pages/map.html">Контакты</a>
+          </div>
+          <a class="nav-link account" href="#" onclick="togglePopup('loginPopup')">Личный кабинет</a>
+          <a class="nav-link pay" href="#">Оплатить</a>
+        </div>
+        <div id="loginPopup" class="popup">
+          <div class="popup-content">
+            <img src="../src/images/logo.svg" alt="">
+            <h3>Авторизация</h3>
+            <form id="loginForm">
+              <input type="email" placeholder="Email" name="email" required>
+              <input type="password" placeholder="Пароль" name="password" required>
+              <p>Нет аккаунта? <span class="register-button"
+                  onclick="togglePopup('registerPopup')">Зарегистрироваться</span></p><br>
+              <button type="submit">Войти</button>
+            </form>
+            <button class="close" onclick="togglePopup('loginPopup')"></button>
+          </div>
+        </div>
+
+
+        <!-- Popup меню для регистрации -->
+        <div id="registerPopup" class="popup">
+          <div class="popup-content">
+            <img src="../src/images/logo.svg" alt="">
+            <h3>Регистрация</h3>
+            <form id="registerForm">
+              <input type="password" placeholder="Имя" name="Name" required>
+              <input type="password" placeholder="Фамилия" name="surname" required>
+              <input type="email" placeholder="Email" name="email" required>
+              <input type="password" placeholder="Пароль" name="password" required>
+              <span class="login-button" onclick="togglePopup('loginPopup')">Обратно к авторизации</span><br>
+              <button type="submit">Зарегистрироваться</button>
+            </form>
+            <button class="close" onclick="togglePopup('registerPopup')"></button>
+          </div>
+        </div>
+        <!-- Popup меню для оплаты -->
+        <div id="paymentPopup" class="popup">
+          <div class="popup-content">
+            <img src="../src/images/logo.svg" alt="">
+            <h3>Оплата</h3>
+            <button class="close" onclick="togglePop('paymentPopup')"></button>
+            <form action="" method="POST">
+              <input type="text" name="cardNumber" placeholder="Номер карты" required>
+              <input type="text" name="cardHolderName" placeholder="Имя владельца карты" required>
+              <input type="text" name="expiryDate" placeholder="Срок действия (MM/YY)" required>
+              <input type="text" name="cvv" placeholder="CVV-код" required>
+              <button type="submit">Оплатить</button>
+            </form>
+          </div>
+        </div>
+
+        <div id="overlayPayment"></div>
+        <div id="overlay"></div>
+      </nav>
+    </div>
+  </header>
+  <div class="scroll-to-top" onclick="scrollToTop()">
+    &uarr;
+  </div>
+  <section class="about">
+    <div class="container">
+      <div class="about-wrapper">
+        <p class="section-routing">Главная / О нас</p>
+        <h2 class="news-heading headingSecond">О нас</h2>
+        <div class="about-block">
+          <div class="about-content">
+            <h3 class="about-heading">Миссия компании</h3>
+            <p class="about-description">Основная цель деятельности компании RosNet заключается в предоставлении
+              Заказчикам качественных и надёжных услуг, основанных на высоком профессионализме наших сотрудников и
+              применении современных и инновационных технологий. <br><br>
+              Мы стремимся максимально полно удовлетворять потребности и пожелания наших Заказчиков, демонстрируя гибкий
+              и индивидуальный подход к запросам каждого из них.
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="../src/images/image 17.png" alt="Фотография">
+          </div>
+        </div>
+        <div class="about-block about-block-mirrored">
+          <div class="about-content">
+            <p class="about-description">Закрытое акционерное общество «Роснэт» основано 4 апреля 1997 года. <br><br>
+
+              Сегодня – это крупнейшая компания в Таганроге с широким спектром телекоммуникационных услуг: Интернет,
+              телефония, IP телевидение, видеонаблюдение. <br><br>
+
+              Мы улучшаем качество жизни людей, предоставляя возможность свободного общения в информационном сообществе.
+              Предлагаем самые современные Интернет технологии наивысшего качества. <br><br>
+
+              За долгие годы работы «Роснэт» зарекомендовал себя как надежный провайдер, предоставляющий качественную
+              услугу за доступную цену. <br><br></p>
+          </div>
+          <div class="about-image">
+            <img src="../src/images/image-about2.png" alt="Фотография">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="dynamics">
+    <div class="container">
+      <div class="dynamics-content">
+        <div class="dynamics-inner">
+          <h2 class="dynamics-heading about-heading">Динамика развития</h2>
+          <div class="dynamics-wrapper">
+            <div class="dynamics-column">
+              <p><span>>25</span><br>
+                лет истории</p>
+              <p><span>>450</span><br>
+                подключенных домов</p>
+            </div>
+            <div class="dynamics-column">
+              <p><span>>50</span><br>
+                сотрудников</p>
+              <p><span>>5000</span><br>
+                Гб данных передаются каждую минуту</p>
+            </div>
+          </div>
+        </div>
+        <div class="dynamics-image">
+          <img src="../src/images/image-about3.png" alt="Изображение">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="best-section">
+    <div class="container">
+      <div class="best-content">
+        <div class="best-inner">
+          <h2 class="best-heading about-heading">Лучшие, потому что</h2>
+          <div class="best-wrapper">
+            <div class="best-column">
+              <img src="../src/images/icons/icon-column1.svg" alt="" class="best-icon">
+              <h4 class="column-heading">Современные</h4>
+              <p class="column-desc">Используем современные технологии и ставим интересы клиента на первое место.</p>
+            </div>
+            <div class="best-column">
+              <img src="../src/images/icons/icon-column2.svg" alt="" class="best-icon">
+              <h4 class="column-heading">Оперативные</h4>
+              <p class="column-desc">Выполняем все поставленные задачи оперативно и в заявленные сроки.</p>
+            </div>
+            <div class="best-column">
+              <img src="../src/images/icons/icon-column3.svg" alt="" class="best-icon">
+              <h4 class="column-heading">Надёжные</h4>
+              <p class="column-desc">Мы гарантируем, что наши услуги будут работать надёжно. Мы хотим, чтобы вы и ваши
+                близкие чувствовали</p>
+            </div>
+            <div class="best-column">
+              <img src="../src/images/icons/icon-column4.svg" alt="" class="best-icon">
+              <h4 class="column-heading">Открытые</h4>
+              <p class="column-desc">Вы всегда можете узнать, кто и что делает</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <div class="gallery-wrapper">
+        <h2 class="gallery-heading about-heading">Фотогалерея</h2>
+        <div class="gallery-images">
+          <img src="../src/images/image-about4.png" alt="">
+          <img src="../src/images/image-about5.png" alt="">
+          <img src="../src/images/image-about6.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="footer-blockWrapper">
+          <div class="footer-links">
+            <div class="column-links">
+              <a href="./pages/about.html" class="footer-link">О компании</a>
+              <a href="./pages/news.html" class="footer-link">Новости</a>
+              <a href="./pages/documents.html" class="footer-link">Документы</a>
+            </div>
+            <div class="column-links">
+              <a href="./pages/homeRates.html" class="footer-link">Тарифы для дома</a>
+              <a href="./pages/bussinesRates.html" class="footer-link">Тарифы для бизнеса</a>
+              <a href="./pages/map.html" class="footer-link">Контакты</a>
+            </div>
+            <div class="column-links">
+              <a href="./pages/speedTest.html" class="footer-link">Тест скорости</a>
+            </div>
+          </div>
+          <div class="footer-block">
+            <div class="footer-buttons">
+              <a class="nav-link account" href="#" onclick="togglePopup('loginPopup')">Личный кабинет</a>
+              <a class="nav-link pay" href="#">Оплатить</a>
+            </div>
+            <div class="phone-number">
+              <img src="../src/images/icons/icon-phone.svg" alt="Телефонный значок">
+              <p>+7 (4725) 43-97-20</p>
+              <span>Круглосуточно</span>
+            </div>
+            <div class="block-icons">
+              <a href="" class="icon-link">
+                <img src="../src/images/icons/icon-vk.svg" alt="" class="icon-vk">
+              </a>
+              <a href="" class="icon-link">
+                <img src="../src/images/icons/icon-telegram.svg" alt="" class="icon-telegram">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="block-confidentiality">
+          <p>&copy; ЗАО «Роснэт»,
+            <script>document.write(new Date().getFullYear());</script>
+          </p>
+          <p>Продолжая использовать наш сайт, вы даете согласие на обработку файлов cookies и других
+            пользовательских
+            данных, в соответствии с Политикой конфиденциальности.</p>
+          <img src="../src/images/sitex-logo-white.png" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

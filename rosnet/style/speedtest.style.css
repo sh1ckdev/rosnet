@@ -1,0 +1,13 @@
+.frame-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 40px;
+}
+
+iframe {
+  width: 520px;
+  height: 520px;
+}
